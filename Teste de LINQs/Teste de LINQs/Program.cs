@@ -98,22 +98,49 @@ namespace Teste_de_LINQs
                     break;
 
 
-                case 5: // Operadores de agregação AVERAGE]
+                case 5: // Operadores de agregação AVERAGE
+                    var avgCreditos = disciplinaLista.Average(s => s.DisciplinaCreditos);
+                    Console.WriteLine("Média de créditos: {0}", avgCreditos);
                     Console.ReadLine();
                     break;
 
 
                 case 6: // Operadores de agregação COUNT
+                    var totalDisciplinas = disciplinaLista.Count();
+                    Console.WriteLine("Numero total de disciplinas: {0}", totalDisciplinas);
+                    var totalCreditos = disciplinaLista.Count(s => s.DisciplinaCreditos >= 3);
+                    Console.WriteLine("Número ed disciplinas com 3 ou mais créditos: {0}", totalCreditos);
                     Console.ReadLine();
                     break;
 
 
                 case 7: // Operadores de agregação MAX
+                    var menosCreditos = disciplinaLista.Min(s => s.DisciplinaCreditos);
+                    Console.WriteLine("Menor número de créditos: {0}", menosCreditos);
+
+                    var maisCreditos = disciplinaLista.Max(s => s.DisciplinaCreditos);
+                    Console.WriteLine("Maior número de créditos: {0}", maisCreditos);
+
+                    var disciplinaComNomeMaisLongo = disciplinaLista.Max(); // Esse operador precisou da implementação da interface IComparable<> junto com a classe ao final do código
+                    Console.WriteLine("ID da Disciplina com maior nome: {0}, Nome: {1}", disciplinaComNomeMaisLongo.DisciplinaID, disciplinaComNomeMaisLongo.DisciplinaNome);
+                    /*var disciplinaComNomeMaisCurto = disciplinaLista.Min(); 
+                    Console.WriteLine("ID da Disciplina com menor nome: {0}, Nome: {1}", disciplinaComNomeMaisCurto.DisciplinaID, disciplinaComNomeMaisCurto.DisciplinaNome);*/
                     Console.ReadLine();
                     break;
 
 
                 case 8: // Operadores de agregação SUM
+                    var somaDeCreditos = disciplinaLista.Sum(s => s.DisciplinaCreditos);
+                    Console.WriteLine("Soma de todos os créditos: {0}", somaDeCreditos);
+
+                    var totalComMaisDeTres = disciplinaLista.Sum(s =>
+                    {
+                        if (s.DisciplinaCreditos >= 3)
+                            return 1;
+                        else
+                            return 0;
+                    });
+                    Console.WriteLine("Total de disciplinas com 3 créditos ou mais: {0}", totalComMaisDeTres);
                     Console.ReadLine();
                     break;
 
@@ -131,10 +158,22 @@ namespace Teste_de_LINQs
         }   
     }   
 
-    public class Disciplina{
+    public class Disciplina : IComparable<Disciplina>
+    {
 
-	    public int DisciplinaID { get; set; }
+        public int DisciplinaID { get; set; }
 	    public string DisciplinaNome { get; set; }
 	    public int DisciplinaCreditos { get; set; }
+
+        public int CompareTo(Disciplina other)
+        {
+            if (this.DisciplinaNome.Length >= other.DisciplinaNome.Length)
+                return 1;
+
+            return 0;
+        }
     }
+
+
 }
+
