@@ -1,0 +1,6 @@
+c:\users\paola.souza\documents\visual studio 2015\Projects\Teste de LINQs\Teste de LINQs\bin\Debug\Teste de LINQs.exe.config
+c:\users\paola.souza\documents\visual studio 2015\Projects\Teste de LINQs\Teste de LINQs\obj\Debug\Teste de LINQs.csprojResolveAssemblyReference.cache
+c:\users\paola.souza\documents\visual studio 2015\Projects\Teste de LINQs\Teste de LINQs\bin\Debug\Teste de LINQs.exe
+c:\users\paola.souza\documents\visual studio 2015\Projects\Teste de LINQs\Teste de LINQs\bin\Debug\Teste de LINQs.pdb
+c:\users\paola.souza\documents\visual studio 2015\Projects\Teste de LINQs\Teste de LINQs\obj\Debug\Teste de LINQs.exe
+c:\users\paola.souza\documents\visual studio 2015\Projects\Teste de LINQs\Teste de LINQs\obj\Debug\Teste de LINQs.pdb
