@@ -12,13 +12,13 @@ namespace Teste_de_LINQs
 	    {
 		    // Collection
 		    IList<Disciplina> intList = new List<Disciplina>() { 
-				new Disciplina() { DisciplinaID = 1, DisciplinaNome = "Eletrônica Analógica", DisciplinaCreditos = 3} ,
-                new Disciplina() { DisciplinaID = 2, DisciplinaNome = "Eletrônica Digital", DisciplinaCreditos = 3} ,
-                new Disciplina() { DisciplinaID = 3, DisciplinaNome = "Física", DisciplinaCreditos = 4} ,
-                new Disciplina() { DisciplinaID = 4, DisciplinaNome = "Física", DisciplinaCreditos = 1} ,
-                new Disciplina() { DisciplinaID = 5, DisciplinaNome = "Gestão", DisciplinaCreditos = 1} ,
-                new Disciplina() { DisciplinaID = 6, DisciplinaNome = "Cálculo", DisciplinaCreditos = 5} ,
-                new Disciplina() { DisciplinaID = 7, DisciplinaNome = "Sinais e Sistemas", DisciplinaCreditos = 4} ,
+			new Disciplina() { DisciplinaID = 1, DisciplinaNome = "Eletrônica Analógica", DisciplinaCreditos = 3} ,
+                	new Disciplina() { DisciplinaID = 2, DisciplinaNome = "Eletrônica Digital", DisciplinaCreditos = 3} ,
+                	new Disciplina() { DisciplinaID = 3, DisciplinaNome = "Física", DisciplinaCreditos = 4} ,
+                	new Disciplina() { DisciplinaID = 4, DisciplinaNome = "Física", DisciplinaCreditos = 1} ,
+                	new Disciplina() { DisciplinaID = 5, DisciplinaNome = "Gestão", DisciplinaCreditos = 1} ,
+                	new Disciplina() { DisciplinaID = 6, DisciplinaNome = "Cálculo", DisciplinaCreditos = 5} ,
+                	new Disciplina() { DisciplinaID = 7, DisciplinaNome = "Sinais e Sistemas", DisciplinaCreditos = 4} ,
 
             };
 
@@ -198,7 +198,8 @@ namespace Teste_de_LINQs
                 {
                     Console.Clear();
                     Console.WriteLine("Take - Retorna o número especificado de elementos, começando no primeiro elemento.");
-                    Console.WriteLine();
+		    Console.WriteLine("Mozinho da minha vida");
+		    Console.WriteLine();
                     IList<int> intListat = new List<int>() { 7, 10, 21, 30, 45, 50, 87 };
                     var newList = intListat.Take(3);
                     Console.WriteLine("Os 3 primeiros numeros são:");
